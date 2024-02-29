@@ -139,7 +139,12 @@ class ProgressViewController: UIViewController {
     
     private func speak(text: String) {
         let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-US") // Установите язык, который вы хотите использовать
+        switch type {
+        case .englishWords:
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        case .russianWords:
+            utterance.voice = AVSpeechSynthesisVoice(language: "ru-RU")
+        }
         synthesizer.speak(utterance)
     }
     
@@ -165,7 +170,7 @@ class ProgressViewController: UIViewController {
     }
     
     @objc func soundButtonTapped() {
-        let word = questionsData.questions[wordCounter].word
+        let word = questionsDataToShow?.questions[wordCounter].word ?? ""
         speak(text: word)
     }
 }

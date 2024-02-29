@@ -153,10 +153,17 @@ extension HomeViewController: UICollectionViewDelegate {
                 return modifiedQuestion
             }
             let data = QuestionsData(questions: mapQuestions)
-            PlistManager.shared.saveDataToPlist(data: data, plistName: PlistName.russianWords.rawValue)
-            let vc = LearningWordsViewController(questionsData: data, dictionaryType: .russianWords)
-            vc.hidesBottomBarWhenPushed = true
-            navigationController?.pushViewController(vc, animated: true)
+            if PlistManager.shared.loadDataFromPlist(plistName: PlistName.russianWords.rawValue) == nil {
+                PlistManager.shared.saveDataToPlist(data: data, plistName: PlistName.russianWords.rawValue)
+                let vc = LearningWordsViewController(questionsData: data, dictionaryType: .russianWords)
+                vc.hidesBottomBarWhenPushed = true
+                navigationController?.pushViewController(vc, animated: true)
+            } else {
+                guard let dataFromPlist = PlistManager.shared.loadDataFromPlist(plistName: PlistName.russianWords.rawValue) else {return}
+                let vc = LearningWordsViewController(questionsData: dataFromPlist, dictionaryType: .russianWords)
+                vc.hidesBottomBarWhenPushed = true
+                navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
 }
