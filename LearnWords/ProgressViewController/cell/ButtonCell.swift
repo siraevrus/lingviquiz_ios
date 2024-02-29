@@ -18,6 +18,7 @@ class ButtonCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
         label.numberOfLines = 0
+        label.font = .systemFont(ofSize: 14)
         contentView.addSubview(label)
         
         // Устанавливаем констрейнты для лейбла

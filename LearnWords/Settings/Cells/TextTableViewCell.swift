@@ -61,5 +61,6 @@ class TextTableViewCell: UITableViewCell {
         if word.know == false {
             label.textColor = UIColor(red: 65/255, green: 165/255, blue: 238/255, alpha: 1)
         }
+        label.font = .systemFont(ofSize: 20, weight: .bold)
     }
 }

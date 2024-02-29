@@ -67,10 +67,10 @@ class HomeCollectionViewCell: UICollectionViewCell {
         switch dictionaryType {
         case .englishWords:
             imageView.image = UIImage(named: "us-flag")
-            label.text = "Русско - английские слова"
+            label.text = "5000 популярных английских слов"
         case .russianWords:
             imageView.image = UIImage(named: "rus-flag")
-            label.text = "Англо - русские слова"
+            label.text = "5000 популярных русских слов"
         }
     }
 }
