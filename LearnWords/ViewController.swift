@@ -8,12 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var startButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -53,6 +53,12 @@ class ViewController: UIViewController {
         tabBarVC.modalPresentationStyle = .fullScreen
         
         present(tabBarVC, animated: true)
+    }
+    
+    @IBAction func madeInButtonTapped(_ sender: UIButton) {
+        if let url = URL(string: "https://onza.me") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
 }
 

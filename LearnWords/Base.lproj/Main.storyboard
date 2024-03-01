@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -38,11 +39,18 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сделано в onza.me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbJ-zq-QLh">
-                                <rect key="frame" x="129.66666666666666" y="775" width="133.99999999999997" height="17"/>
+                                <rect key="frame" x="129.66666666666666" y="762" width="133.99999999999997" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksL-U7-ajB">
+                                <rect key="frame" x="129.66666666666666" y="762" width="133.99999999999997" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="madeInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="etQ-se-zif"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Версия 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oK-jf-AGx">
                                 <rect key="frame" x="167.66666666666666" y="802" width="58" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -53,6 +61,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ksL-U7-ajB" firstAttribute="bottom" secondItem="KbJ-zq-QLh" secondAttribute="bottom" id="1xg-yh-1QA"/>
                             <constraint firstItem="4oK-jf-AGx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2hR-bB-AU7"/>
                             <constraint firstItem="a4U-VT-Bhn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4UI-cg-Eeq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4oK-jf-AGx" secondAttribute="bottom" constant="2" id="A7k-Op-zs5"/>
@@ -65,8 +74,11 @@
                             <constraint firstItem="a4U-VT-Bhn" firstAttribute="top" secondItem="9LG-UK-8TM" secondAttribute="bottom" constant="30" id="aA1-qx-SXw"/>
                             <constraint firstItem="kmn-dU-JPM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bcI-8W-jLV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a4U-VT-Bhn" secondAttribute="trailing" constant="16" id="cke-aJ-b3f"/>
+                            <constraint firstItem="ksL-U7-ajB" firstAttribute="trailing" secondItem="KbJ-zq-QLh" secondAttribute="trailing" id="ddw-86-3HW"/>
+                            <constraint firstItem="ksL-U7-ajB" firstAttribute="leading" secondItem="KbJ-zq-QLh" secondAttribute="leading" id="hCY-wv-hLH"/>
                             <constraint firstItem="KbJ-zq-QLh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i5H-o2-QpY"/>
                             <constraint firstItem="9LG-UK-8TM" firstAttribute="top" secondItem="kmn-dU-JPM" secondAttribute="bottom" constant="50" id="iu8-g3-dRl"/>
+                            <constraint firstItem="ksL-U7-ajB" firstAttribute="top" secondItem="KbJ-zq-QLh" secondAttribute="top" id="poP-0R-Wjo"/>
                             <constraint firstItem="9LG-UK-8TM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="32" id="rIL-GK-I0p"/>
                         </constraints>
                     </view>

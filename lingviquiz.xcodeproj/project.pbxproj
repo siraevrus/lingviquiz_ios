@@ -224,7 +224,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE88B5AF2B7F5A3000396A2D /* Build configuration list for PBXProject "lingviquiz_ios" */;
+			buildConfigurationList = CE88B5AF2B7F5A3000396A2D /* Build configuration list for PBXProject "lingviquiz" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -492,7 +492,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE88B5AF2B7F5A3000396A2D /* Build configuration list for PBXProject "lingviquiz_ios" */ = {
+		CE88B5AF2B7F5A3000396A2D /* Build configuration list for PBXProject "lingviquiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE88B5C62B7F5A3200396A2D /* Debug */,
