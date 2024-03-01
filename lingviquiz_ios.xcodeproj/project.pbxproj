@@ -10,6 +10,7 @@
 		CE3BCDD82B8743A600867E61 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCDD72B8743A600867E61 /* WordModel.swift */; };
 		CE3E25E82B90768F0073B543 /* ru_words.json in Resources */ = {isa = PBXBuildFile; fileRef = CE3E25E72B90768F0073B543 /* ru_words.json */; };
 		CE3E25EB2B907A140073B543 /* PlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E25EA2B907A140073B543 /* PlistManager.swift */; };
+		CE6D3A3D2B91D27C004C2EAF /* DontKnowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6D3A3C2B91D27C004C2EAF /* DontKnowViewController.swift */; };
 		CE88B5B82B7F5A3000396A2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88B5B72B7F5A3000396A2D /* AppDelegate.swift */; };
 		CE88B5BA2B7F5A3000396A2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88B5B92B7F5A3000396A2D /* SceneDelegate.swift */; };
 		CE88B5BC2B7F5A3000396A2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88B5BB2B7F5A3000396A2D /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 		CE3BCDD72B8743A600867E61 /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
 		CE3E25E72B90768F0073B543 /* ru_words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ru_words.json; sourceTree = "<group>"; };
 		CE3E25EA2B907A140073B543 /* PlistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistManager.swift; sourceTree = "<group>"; };
+		CE6D3A3C2B91D27C004C2EAF /* DontKnowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontKnowViewController.swift; sourceTree = "<group>"; };
 		CE88B5B42B7F5A3000396A2D /* LearnWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE88B5B72B7F5A3000396A2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE88B5B92B7F5A3000396A2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		CE6D3A3B2B91D259004C2EAF /* DontKnowViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE6D3A3C2B91D27C004C2EAF /* DontKnowViewController.swift */,
+			);
+			path = DontKnowViewController;
+			sourceTree = "<group>";
+		};
 		CE88B5AB2B7F5A3000396A2D = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +112,7 @@
 		CE88B5B62B7F5A3000396A2D /* LearnWords */ = {
 			isa = PBXGroup;
 			children = (
+				CE6D3A3B2B91D259004C2EAF /* DontKnowViewController */,
 				CE3E25E92B907A030073B543 /* Managers */,
 				CEFA91A12B8F6062009805AE /* Words.json */,
 				CE3E25E72B90768F0073B543 /* ru_words.json */,
@@ -213,7 +224,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CE88B5AF2B7F5A3000396A2D /* Build configuration list for PBXProject "LearnWords" */;
+			buildConfigurationList = CE88B5AF2B7F5A3000396A2D /* Build configuration list for PBXProject "lingviquiz_ios" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -261,6 +272,7 @@
 				CEEB41ED2B8628CF00E9EFFC /* ProgressViewController.swift in Sources */,
 				CEFE8A9C2B837DCD006A2F03 /* SwitchTableViewCell.swift in Sources */,
 				CE88B5BC2B7F5A3000396A2D /* ViewController.swift in Sources */,
+				CE6D3A3D2B91D27C004C2EAF /* DontKnowViewController.swift in Sources */,
 				CE88B5B82B7F5A3000396A2D /* AppDelegate.swift in Sources */,
 				CE88B5BA2B7F5A3000396A2D /* SceneDelegate.swift in Sources */,
 				CE3E25EB2B907A140073B543 /* PlistManager.swift in Sources */,
@@ -472,7 +484,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE88B5AF2B7F5A3000396A2D /* Build configuration list for PBXProject "LearnWords" */ = {
+		CE88B5AF2B7F5A3000396A2D /* Build configuration list for PBXProject "lingviquiz_ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE88B5C62B7F5A3200396A2D /* Debug */,

@@ -89,12 +89,12 @@ class LearningWordsViewController: UIViewController {
     }
     
     @objc private func squareViewTapped() {
-        print("Square view tapped")
+        guard questionsData.questions.filter({ $0.know == false}).count != 0 else { return }
+        let vc = DontKnowViewController(questionsData: questionsData, dictionaryType: type)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc private func learButtonTapped() {
-//        let filtredData = questionsData.questions.filter({ $0.know == nil && $0.choose == nil })
-//        let questionData = QuestionsData(questions: filtredData)
         let vc = ProgressViewController(questionsData: questionsData, dictionaryType: type)
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)

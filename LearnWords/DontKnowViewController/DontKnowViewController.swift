@@ -1,16 +1,15 @@
 //
-//  ProgressViewController.swift
+//  DontKnowViewController.swift
 //  LearnWords
 //
-//  Created by Сергей Крайнов on 21.02.2024.
+//  Created by Сергей Крайнов on 01.03.2024.
 //
 
 import UIKit
 import AVFoundation
 import Lottie
 
-class ProgressViewController: UIViewController {
-    // Создаем коллекцию
+class DontKnowViewController: UIViewController {
     var collectionView: UICollectionView!
     
     let synthesizer = AVSpeechSynthesizer()
@@ -24,14 +23,6 @@ class ProgressViewController: UIViewController {
         button.backgroundColor = .clear
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        return button
-    }()
-    
-    let closeButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(named: "closeButton"), for: .normal)
-        button.tintColor = .black
-        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
@@ -53,24 +44,6 @@ class ProgressViewController: UIViewController {
         return label
     }()
     
-    let progressLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "5000/5"
-        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        label.numberOfLines = 0
-        return label
-    }()
-    
-    let progressBar: UIProgressView = {
-        let progressBar = UIProgressView(progressViewStyle: .default)
-        progressBar.translatesAutoresizingMaskIntoConstraints = false
-        progressBar.progressTintColor = UIColor(red: 18/255, green: 18/255, blue: 23/255, alpha: 1)
-        progressBar.trackTintColor = UIColor(red: 219/255, green: 222/255, blue: 229/255, alpha: 1)
-        progressBar.progress = 0.5
-        return progressBar
-    }()
-    
     var questionsData: QuestionsData
     var questionsDataToShow: QuestionsData?
     var type: DictionaryType
@@ -82,7 +55,7 @@ class ProgressViewController: UIViewController {
     init(questionsData: QuestionsData, dictionaryType: DictionaryType) {
         self.questionsData = questionsData
         self.type = dictionaryType
-        let filtredData = questionsData.questions.filter({ $0.know == nil && $0.choose == nil })
+        let filtredData = questionsData.questions.filter({ $0.know == false })
         let questionData = QuestionsData(questions: filtredData)
         self.questionsDataToShow = questionData
         super.init(nibName: nil, bundle: nil)
@@ -96,7 +69,6 @@ class ProgressViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-        closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
         soundButton.addTarget(self, action: #selector(soundButtonTapped), for: .touchUpInside)
         setupCollection()
         setupConstraints()
@@ -104,23 +76,32 @@ class ProgressViewController: UIViewController {
         setupUi()
         
         synthesizer.delegate = self
+        
+        switch type {
+        case .englishWords:
+            title = "Word to learn"
+        case .russianWords:
+            title = "Слова для изучения"
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func setupUi() {
         wordLabel.text = processLabelText(questionsDataToShow?.questions[wordCounter].word ?? "")
         answerSet = Set(questionsDataToShow?.questions[wordCounter].options ?? [])
         answerArray = Array(answerSet)
-        let chosenOrDontknowWords = questionsData.questions.filter({ $0.know != nil || $0.choose != nil }).count
-        progressLabel.text = "\(String(questionsData.questions.count))/\(String(chosenOrDontknowWords))"
-        progressBar.progress = Float(chosenOrDontknowWords) / Float(questionsData.questions.count)
     }
     
     private func goTonextWord() {
-        guard wordCounter < questionsData.questions.count - 1 else {
-            print("Кончились слова")
+        wordCounter += 1
+        guard let data = questionsDataToShow?.questions, wordCounter < data.count - 1 else {
+            navigationController?.popViewController(animated: true)
             return
         }
-        wordCounter += 1
         setupUi()
         collectionView.reloadData()
         animationView?.isHidden = true
@@ -169,7 +150,6 @@ class ProgressViewController: UIViewController {
         let index = questionsData.questions.firstIndex(where: { word in
             word.answer == answer
         })
-        print("Кнопка 'Не знаю' была нажата")
         questionsData.questions[index ?? wordCounter].know = false
         switch type {
         case .englishWords:
@@ -191,7 +171,7 @@ class ProgressViewController: UIViewController {
     }
 }
 
-extension ProgressViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension DontKnowViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     // MARK: UICollectionViewDataSource
     
@@ -215,6 +195,7 @@ extension ProgressViewController: UICollectionViewDelegate, UICollectionViewData
                 word.answer == answer
             })
             questionsData.questions[index ?? wordCounter].choose = true
+            questionsData.questions[index ?? wordCounter].know = nil
             switch type {
             case .englishWords:
                 PlistManager.shared.saveDataToPlist(data: questionsData, plistName: PlistName.englishWords.rawValue)
@@ -253,7 +234,7 @@ extension ProgressViewController: UICollectionViewDelegate, UICollectionViewData
     }
 }
 
-extension ProgressViewController {
+extension DontKnowViewController {
     private func setupCollection() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -293,13 +274,6 @@ extension ProgressViewController {
             collectionView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.20)
         ])
         
-        view.addSubview(closeButton)
-        NSLayoutConstraint.activate([
-            closeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5),
-            closeButton.heightAnchor.constraint(equalToConstant: 40)
-        ])
-        
         view.addSubview(soundButton)
         NSLayoutConstraint.activate([
             soundButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -311,23 +285,9 @@ extension ProgressViewController {
             wordLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             wordLabel.bottomAnchor.constraint(equalTo: soundButton.topAnchor, constant: -60)
         ])
-        
-        view.addSubview(progressLabel)
-        NSLayoutConstraint.activate([
-            progressLabel.topAnchor.constraint(equalTo: closeButton.bottomAnchor, constant: 30),
-            progressLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16)
-        ])
-        
-        view.addSubview(progressBar)
-        NSLayoutConstraint.activate([
-            progressBar.topAnchor.constraint(equalTo: progressLabel.bottomAnchor, constant: 10),
-            progressBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            progressBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            progressBar.heightAnchor.constraint(equalToConstant: 6)
-        ])
     }
 }
 
-extension ProgressViewController: AVSpeechSynthesizerDelegate {
+extension DontKnowViewController: AVSpeechSynthesizerDelegate {
     
 }
