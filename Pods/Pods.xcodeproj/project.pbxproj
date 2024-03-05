@@ -1,0 +1,738 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		074C28A4AF837F1AD907EADD25304D84 /* OSSSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD55CFE66D846F01E652E3E5588E21D /* OSSSpeech.swift */; };
+		08E684CF3F74DFCB2188B3D7598C0EE9 /* OSSVoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7041634C178609178CB89F515D33BAEE /* OSSVoice.swift */; };
+		14CE584F70A17D3CF37412E4C2EF2C8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		17ABDF82C9233D7E6387A6B34DF1196B /* OSSSpeechUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B3A8C52B72A65B47D532E7F1F6E8A /* OSSSpeechUtility.swift */; };
+		2547222B8DB34D19C22C1AA499AE2081 /* OSSSpeechKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B66E8DD02D73091B52BC441308BE1BA9 /* OSSSpeechKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46A52E3EE5021BC4FFCC0CCA12E6D731 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9636B56A2858C4A540C45AD75873469A /* Images.xcassets */; };
+		46BDEDDAE9A73122BD61016FC910F145 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65A96E77A4F69E1F0F9D9F596E6BDF03 /* Localizable.strings */; };
+		53EB5870EC014D64BEFDF2DBAAC0B6B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8A5E52DD2AE5AC8C1517083663618889 /* OSSUtterance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDA4FB19FAD7238E412A08BD0D333CC /* OSSUtterance.swift */; };
+		8B34802410A1B2E485379C86760FF24B /* Pods-LearnWords-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F0DB6DDFE5408740079BDD406310C /* Pods-LearnWords-dummy.m */; };
+		9EDE980E07FC4D17B3F870E416255149 /* OSSSpeechKit-OSSSpeechKit in Resources */ = {isa = PBXBuildFile; fileRef = EC88082EE89A3F8B07244B926FA34111 /* OSSSpeechKit-OSSSpeechKit */; };
+		BAC0D58DDDEA318E335B094DE99158BB /* OSSSpeechKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12DB97F24B24F0B49B8CF1E05831D98B /* OSSSpeechKit-dummy.m */; };
+		F0BD3892861964900A6A7124AE6AB28F /* Pods-LearnWords-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE14665B41BBC3E95816D848DF9CF2C /* Pods-LearnWords-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0CF631B902DE44450D80D49CEC04E57B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81D45C7AE67E967013F2368E9E158685;
+			remoteInfo = "OSSSpeechKit-OSSSpeechKit";
+		};
+		508604443B86E88BC8EDB8E17F9D73B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC609081AFEBC1B2993C1780AA242BC0;
+			remoteInfo = OSSSpeechKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		016B6722EA67A6649258B669DFBB4A0E /* Pods-LearnWords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LearnWords.debug.xcconfig"; sourceTree = "<group>"; };
+		0303D61B26319A1A7BC26C65F7E74F2D /* OSSSpeechKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OSSSpeechKit; path = OSSSpeechKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05309D04ECA51F2F2970902D48216C81 /* Pods-LearnWords-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LearnWords-acknowledgements.markdown"; sourceTree = "<group>"; };
+		12DB97F24B24F0B49B8CF1E05831D98B /* OSSSpeechKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OSSSpeechKit-dummy.m"; sourceTree = "<group>"; };
+		17E59163D8D9EACE8FB42303B589937E /* ResourceBundle-OSSSpeechKit-OSSSpeechKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-OSSSpeechKit-OSSSpeechKit-Info.plist"; sourceTree = "<group>"; };
+		190715E12588B6441B3EFAEFB466E465 /* Pods-LearnWords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LearnWords.release.xcconfig"; sourceTree = "<group>"; };
+		1DDA4FB19FAD7238E412A08BD0D333CC /* OSSUtterance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSSUtterance.swift; path = OSSSpeechKit/Classes/OSSUtterance.swift; sourceTree = "<group>"; };
+		2DE14665B41BBC3E95816D848DF9CF2C /* Pods-LearnWords-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LearnWords-umbrella.h"; sourceTree = "<group>"; };
+		437B3A8C52B72A65B47D532E7F1F6E8A /* OSSSpeechUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSSSpeechUtility.swift; path = OSSSpeechKit/Classes/OSSSpeechUtility.swift; sourceTree = "<group>"; };
+		4D1F0DB6DDFE5408740079BDD406310C /* Pods-LearnWords-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LearnWords-dummy.m"; sourceTree = "<group>"; };
+		5AD55CFE66D846F01E652E3E5588E21D /* OSSSpeech.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSSSpeech.swift; path = OSSSpeechKit/Classes/OSSSpeech.swift; sourceTree = "<group>"; };
+		5AD5A16E9BDD9F77BC3AB6D4408C79E9 /* Pods-LearnWords.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LearnWords.modulemap"; sourceTree = "<group>"; };
+		6145499260939A6782006BE3A7FE1ADF /* Pods-LearnWords */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LearnWords"; path = Pods_LearnWords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63A1B4078E96831AD444BB371424FAC8 /* OSSSpeechKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OSSSpeechKit.debug.xcconfig; sourceTree = "<group>"; };
+		65A96E77A4F69E1F0F9D9F596E6BDF03 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = OSSSpeechKit/Assets/Localizable.strings; sourceTree = "<group>"; };
+		7041634C178609178CB89F515D33BAEE /* OSSVoice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OSSVoice.swift; path = OSSSpeechKit/Classes/OSSVoice.swift; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7C017B1A938904F44873686E04C41A58 /* OSSSpeechKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OSSSpeechKit-Info.plist"; sourceTree = "<group>"; };
+		92DD618AF8A0B63E9828CE109F30B7B0 /* Pods-LearnWords-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LearnWords-Info.plist"; sourceTree = "<group>"; };
+		9636B56A2858C4A540C45AD75873469A /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = OSSSpeechKit/Assets/Images.xcassets; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A96313D3D88D23DD9F83F814288CD77B /* OSSSpeechKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OSSSpeechKit-prefix.pch"; sourceTree = "<group>"; };
+		B66E8DD02D73091B52BC441308BE1BA9 /* OSSSpeechKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OSSSpeechKit-umbrella.h"; sourceTree = "<group>"; };
+		B6E388A6EC73A66576E61FFAE7E35D93 /* Pods-LearnWords-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LearnWords-acknowledgements.plist"; sourceTree = "<group>"; };
+		D1078EB8BBC50287F69B996647994277 /* OSSSpeechKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OSSSpeechKit.modulemap; sourceTree = "<group>"; };
+		D18FE7166EBA0D6F1B281930439A9170 /* Pods-LearnWords-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LearnWords-frameworks.sh"; sourceTree = "<group>"; };
+		EC88082EE89A3F8B07244B926FA34111 /* OSSSpeechKit-OSSSpeechKit */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "OSSSpeechKit-OSSSpeechKit"; path = OSSSpeechKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4003F7223F1CDC195F64836A00D2FF2 /* OSSSpeechKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OSSSpeechKit.release.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2867C8FF9246756F182530A4AE311C09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EB5870EC014D64BEFDF2DBAAC0B6B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D481BD6FC361308BDF8425D9C460C4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14CE584F70A17D3CF37412E4C2EF2C8B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF4B7606DCA2595B0AA27923A4075D87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E1545FABA25A3259C945C4E9A555C13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0303D61B26319A1A7BC26C65F7E74F2D /* OSSSpeechKit */,
+				EC88082EE89A3F8B07244B926FA34111 /* OSSSpeechKit-OSSSpeechKit */,
+				6145499260939A6782006BE3A7FE1ADF /* Pods-LearnWords */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		360856D8EF03714E692B0412DDC08137 /* Pods-LearnWords */ = {
+			isa = PBXGroup;
+			children = (
+				5AD5A16E9BDD9F77BC3AB6D4408C79E9 /* Pods-LearnWords.modulemap */,
+				05309D04ECA51F2F2970902D48216C81 /* Pods-LearnWords-acknowledgements.markdown */,
+				B6E388A6EC73A66576E61FFAE7E35D93 /* Pods-LearnWords-acknowledgements.plist */,
+				4D1F0DB6DDFE5408740079BDD406310C /* Pods-LearnWords-dummy.m */,
+				D18FE7166EBA0D6F1B281930439A9170 /* Pods-LearnWords-frameworks.sh */,
+				92DD618AF8A0B63E9828CE109F30B7B0 /* Pods-LearnWords-Info.plist */,
+				2DE14665B41BBC3E95816D848DF9CF2C /* Pods-LearnWords-umbrella.h */,
+				016B6722EA67A6649258B669DFBB4A0E /* Pods-LearnWords.debug.xcconfig */,
+				190715E12588B6441B3EFAEFB466E465 /* Pods-LearnWords.release.xcconfig */,
+			);
+			name = "Pods-LearnWords";
+			path = "Target Support Files/Pods-LearnWords";
+			sourceTree = "<group>";
+		};
+		4A5DDE9A747D8580E9C911AD8194E910 /* OSSSpeechKit */ = {
+			isa = PBXGroup;
+			children = (
+				5AD55CFE66D846F01E652E3E5588E21D /* OSSSpeech.swift */,
+				437B3A8C52B72A65B47D532E7F1F6E8A /* OSSSpeechUtility.swift */,
+				1DDA4FB19FAD7238E412A08BD0D333CC /* OSSUtterance.swift */,
+				7041634C178609178CB89F515D33BAEE /* OSSVoice.swift */,
+				C51826B6AAD565D79EDC2E29AF06C293 /* Resources */,
+				CFA3ACF56669759C63B7CDEAA550EC2B /* Support Files */,
+			);
+			name = OSSSpeechKit;
+			path = OSSSpeechKit;
+			sourceTree = "<group>";
+		};
+		4F78E9DC0B6A5C674418613D40E234CE /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				360856D8EF03714E692B0412DDC08137 /* Pods-LearnWords */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C51826B6AAD565D79EDC2E29AF06C293 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9636B56A2858C4A540C45AD75873469A /* Images.xcassets */,
+				65A96E77A4F69E1F0F9D9F596E6BDF03 /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				E2F419E7730E8F4A66CFC66D623BAE71 /* Pods */,
+				0E1545FABA25A3259C945C4E9A555C13 /* Products */,
+				4F78E9DC0B6A5C674418613D40E234CE /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CFA3ACF56669759C63B7CDEAA550EC2B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1078EB8BBC50287F69B996647994277 /* OSSSpeechKit.modulemap */,
+				12DB97F24B24F0B49B8CF1E05831D98B /* OSSSpeechKit-dummy.m */,
+				7C017B1A938904F44873686E04C41A58 /* OSSSpeechKit-Info.plist */,
+				A96313D3D88D23DD9F83F814288CD77B /* OSSSpeechKit-prefix.pch */,
+				B66E8DD02D73091B52BC441308BE1BA9 /* OSSSpeechKit-umbrella.h */,
+				63A1B4078E96831AD444BB371424FAC8 /* OSSSpeechKit.debug.xcconfig */,
+				F4003F7223F1CDC195F64836A00D2FF2 /* OSSSpeechKit.release.xcconfig */,
+				17E59163D8D9EACE8FB42303B589937E /* ResourceBundle-OSSSpeechKit-OSSSpeechKit-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/OSSSpeechKit";
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2F419E7730E8F4A66CFC66D623BAE71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A5DDE9A747D8580E9C911AD8194E910 /* OSSSpeechKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		647D430668C8FC6B10B1C9CFF8D5C97F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2547222B8DB34D19C22C1AA499AE2081 /* OSSSpeechKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94A78FB39406D2AD8535968510B36156 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0BD3892861964900A6A7124AE6AB28F /* Pods-LearnWords-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		81D45C7AE67E967013F2368E9E158685 /* OSSSpeechKit-OSSSpeechKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 605A6A8FFB336E267F8963325262DC1E /* Build configuration list for PBXNativeTarget "OSSSpeechKit-OSSSpeechKit" */;
+			buildPhases = (
+				95D0B2A2908954B05D9FD5478D6D2ED5 /* Sources */,
+				DF4B7606DCA2595B0AA27923A4075D87 /* Frameworks */,
+				59278291D42A2A6D2BC4E685817274E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OSSSpeechKit-OSSSpeechKit";
+			productName = OSSSpeechKit;
+			productReference = EC88082EE89A3F8B07244B926FA34111 /* OSSSpeechKit-OSSSpeechKit */;
+			productType = "com.apple.product-type.bundle";
+		};
+		CC609081AFEBC1B2993C1780AA242BC0 /* OSSSpeechKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E5BF8CDEBE8B8301F38B095F3752151 /* Build configuration list for PBXNativeTarget "OSSSpeechKit" */;
+			buildPhases = (
+				647D430668C8FC6B10B1C9CFF8D5C97F /* Headers */,
+				566DF82373BCD2F78172CF4E20B67FC5 /* Sources */,
+				2D481BD6FC361308BDF8425D9C460C4C /* Frameworks */,
+				90246C70B82B3F05469FE9E945CFF0EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2594BF657B40064AE3C3EE4665A8EC77 /* PBXTargetDependency */,
+			);
+			name = OSSSpeechKit;
+			productName = OSSSpeechKit;
+			productReference = 0303D61B26319A1A7BC26C65F7E74F2D /* OSSSpeechKit */;
+			productType = "com.apple.product-type.framework";
+		};
+		E34F6627139F8A66E64C7A8C59A2648D /* Pods-LearnWords */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81C06AEE39AB53F3CE9BB187FC5CD7E8 /* Build configuration list for PBXNativeTarget "Pods-LearnWords" */;
+			buildPhases = (
+				94A78FB39406D2AD8535968510B36156 /* Headers */,
+				7F7313C10AEF18F07C5971602F528620 /* Sources */,
+				2867C8FF9246756F182530A4AE311C09 /* Frameworks */,
+				2EDF95BEC914C3C9BAA38287C97DE31B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC7B7990F3F2DC3F8D3C29424AC121A0 /* PBXTargetDependency */,
+			);
+			name = "Pods-LearnWords";
+			productName = Pods_LearnWords;
+			productReference = 6145499260939A6782006BE3A7FE1ADF /* Pods-LearnWords */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 0E1545FABA25A3259C945C4E9A555C13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC609081AFEBC1B2993C1780AA242BC0 /* OSSSpeechKit */,
+				81D45C7AE67E967013F2368E9E158685 /* OSSSpeechKit-OSSSpeechKit */,
+				E34F6627139F8A66E64C7A8C59A2648D /* Pods-LearnWords */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2EDF95BEC914C3C9BAA38287C97DE31B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59278291D42A2A6D2BC4E685817274E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46A52E3EE5021BC4FFCC0CCA12E6D731 /* Images.xcassets in Resources */,
+				46BDEDDAE9A73122BD61016FC910F145 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90246C70B82B3F05469FE9E945CFF0EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EDE980E07FC4D17B3F870E416255149 /* OSSSpeechKit-OSSSpeechKit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		566DF82373BCD2F78172CF4E20B67FC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				074C28A4AF837F1AD907EADD25304D84 /* OSSSpeech.swift in Sources */,
+				BAC0D58DDDEA318E335B094DE99158BB /* OSSSpeechKit-dummy.m in Sources */,
+				17ABDF82C9233D7E6387A6B34DF1196B /* OSSSpeechUtility.swift in Sources */,
+				8A5E52DD2AE5AC8C1517083663618889 /* OSSUtterance.swift in Sources */,
+				08E684CF3F74DFCB2188B3D7598C0EE9 /* OSSVoice.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F7313C10AEF18F07C5971602F528620 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B34802410A1B2E485379C86760FF24B /* Pods-LearnWords-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D0B2A2908954B05D9FD5478D6D2ED5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2594BF657B40064AE3C3EE4665A8EC77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "OSSSpeechKit-OSSSpeechKit";
+			target = 81D45C7AE67E967013F2368E9E158685 /* OSSSpeechKit-OSSSpeechKit */;
+			targetProxy = 0CF631B902DE44450D80D49CEC04E57B /* PBXContainerItemProxy */;
+		};
+		CC7B7990F3F2DC3F8D3C29424AC121A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OSSSpeechKit;
+			target = CC609081AFEBC1B2993C1780AA242BC0 /* OSSSpeechKit */;
+			targetProxy = 508604443B86E88BC8EDB8E17F9D73B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0766AB625F7B42771EA03C7F71B70287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4003F7223F1CDC195F64836A00D2FF2 /* OSSSpeechKit.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OSSSpeechKit/OSSSpeechKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OSSSpeechKit/OSSSpeechKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/OSSSpeechKit/OSSSpeechKit.modulemap";
+				PRODUCT_MODULE_NAME = OSSSpeechKit;
+				PRODUCT_NAME = OSSSpeechKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		30E0B9EFD9A5C45D0D351231E81B30B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		42AE56E27E61EBF6A62B15E738391714 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 190715E12588B6441B3EFAEFB466E465 /* Pods-LearnWords.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LearnWords/Pods-LearnWords-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LearnWords/Pods-LearnWords.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5A4B0400989CDD5E288151890BE449E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63A1B4078E96831AD444BB371424FAC8 /* OSSSpeechKit.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/OSSSpeechKit/OSSSpeechKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OSSSpeechKit/OSSSpeechKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/OSSSpeechKit/OSSSpeechKit.modulemap";
+				PRODUCT_MODULE_NAME = OSSSpeechKit;
+				PRODUCT_NAME = OSSSpeechKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6874DEDAF072BF5E97F6A24C0334C1B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4003F7223F1CDC195F64836A00D2FF2 /* OSSSpeechKit.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/OSSSpeechKit";
+				IBSC_MODULE = OSSSpeechKit;
+				INFOPLIST_FILE = "Target Support Files/OSSSpeechKit/ResourceBundle-OSSSpeechKit-OSSSpeechKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_NAME = OSSSpeechKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		BF6D04862F1308E1C6B0447796437143 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63A1B4078E96831AD444BB371424FAC8 /* OSSSpeechKit.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/OSSSpeechKit";
+				IBSC_MODULE = OSSSpeechKit;
+				INFOPLIST_FILE = "Target Support Files/OSSSpeechKit/ResourceBundle-OSSSpeechKit-OSSSpeechKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_NAME = OSSSpeechKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		F4FF6A0D1970CA9705974E3CB2134802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FB4FB9FFFFB06FC85AFB915BD23899E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 016B6722EA67A6649258B669DFBB4A0E /* Pods-LearnWords.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LearnWords/Pods-LearnWords-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LearnWords/Pods-LearnWords.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E5BF8CDEBE8B8301F38B095F3752151 /* Build configuration list for PBXNativeTarget "OSSSpeechKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A4B0400989CDD5E288151890BE449E5 /* Debug */,
+				0766AB625F7B42771EA03C7F71B70287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4FF6A0D1970CA9705974E3CB2134802 /* Debug */,
+				30E0B9EFD9A5C45D0D351231E81B30B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		605A6A8FFB336E267F8963325262DC1E /* Build configuration list for PBXNativeTarget "OSSSpeechKit-OSSSpeechKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF6D04862F1308E1C6B0447796437143 /* Debug */,
+				6874DEDAF072BF5E97F6A24C0334C1B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81C06AEE39AB53F3CE9BB187FC5CD7E8 /* Build configuration list for PBXNativeTarget "Pods-LearnWords" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB4FB9FFFFB06FC85AFB915BD23899E1 /* Debug */,
+				42AE56E27E61EBF6A62B15E738391714 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

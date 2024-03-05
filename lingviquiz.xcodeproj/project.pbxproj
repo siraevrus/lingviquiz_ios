@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C9E8E13B8F070198FBE75E9 /* Pods_LearnWords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF30DAB0A2F3A78BE321FA8F /* Pods_LearnWords.framework */; };
 		CE3BCDD82B8743A600867E61 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCDD72B8743A600867E61 /* WordModel.swift */; };
 		CE3E25E82B90768F0073B543 /* ru_words.json in Resources */ = {isa = PBXBuildFile; fileRef = CE3E25E72B90768F0073B543 /* ru_words.json */; };
 		CE3E25EB2B907A140073B543 /* PlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E25EA2B907A140073B543 /* PlistManager.swift */; };
+		CE6838E92B95E3CC004ED95C /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE6838E82B95E3CC004ED95C /* sound.wav */; };
+		CE6838EB2B961892004ED95C /* BuildManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6838EA2B961892004ED95C /* BuildManager.swift */; };
 		CE6D3A3D2B91D27C004C2EAF /* DontKnowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6D3A3C2B91D27C004C2EAF /* DontKnowViewController.swift */; };
 		CE88B5B82B7F5A3000396A2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88B5B72B7F5A3000396A2D /* AppDelegate.swift */; };
 		CE88B5BA2B7F5A3000396A2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88B5B92B7F5A3000396A2D /* SceneDelegate.swift */; };
@@ -18,6 +21,10 @@
 		CE88B5C12B7F5A3200396A2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE88B5C02B7F5A3200396A2D /* Assets.xcassets */; };
 		CE88B5C42B7F5A3200396A2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE88B5C22B7F5A3200396A2D /* LaunchScreen.storyboard */; };
 		CE88B5CC2B7F88A600396A2D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE88B5CB2B7F88A600396A2D /* HomeViewController.swift */; };
+		CECFBA3B2B95BE370056EE1D /* AppMetricaAdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = CECFBA3A2B95BE370056EE1D /* AppMetricaAdSupport */; };
+		CECFBA3D2B95BE370056EE1D /* AppMetricaCore in Frameworks */ = {isa = PBXBuildFile; productRef = CECFBA3C2B95BE370056EE1D /* AppMetricaCore */; };
+		CECFBA3F2B95BE370056EE1D /* AppMetricaCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = CECFBA3E2B95BE370056EE1D /* AppMetricaCrashes */; };
+		CECFBA412B95BE370056EE1D /* AppMetricaWebKit in Frameworks */ = {isa = PBXBuildFile; productRef = CECFBA402B95BE370056EE1D /* AppMetricaWebKit */; };
 		CEEB41ED2B8628CF00E9EFFC /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB41EC2B8628CF00E9EFFC /* ProgressViewController.swift */; };
 		CEEB41F02B862BEF00E9EFFC /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB41EF2B862BEF00E9EFFC /* ButtonCell.swift */; };
 		CEFA0D702B7F885A00C5A563 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFA0D6F2B7F885A00C5A563 /* SettingsViewController.swift */; };
@@ -32,9 +39,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EA81D2B6EEF167C07A4EA53 /* Pods-LearnWords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnWords.release.xcconfig"; path = "Target Support Files/Pods-LearnWords/Pods-LearnWords.release.xcconfig"; sourceTree = "<group>"; };
+		60589C8E259FBF1A05E405A3 /* Pods-LearnWords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnWords.debug.xcconfig"; path = "Target Support Files/Pods-LearnWords/Pods-LearnWords.debug.xcconfig"; sourceTree = "<group>"; };
+		AF30DAB0A2F3A78BE321FA8F /* Pods_LearnWords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnWords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3BCDD72B8743A600867E61 /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
 		CE3E25E72B90768F0073B543 /* ru_words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ru_words.json; sourceTree = "<group>"; };
 		CE3E25EA2B907A140073B543 /* PlistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistManager.swift; sourceTree = "<group>"; };
+		CE6838E82B95E3CC004ED95C /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
+		CE6838EA2B961892004ED95C /* BuildManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildManager.swift; sourceTree = "<group>"; };
 		CE6D3A3C2B91D27C004C2EAF /* DontKnowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontKnowViewController.swift; sourceTree = "<group>"; };
 		CE88B5B42B7F5A3000396A2D /* LearnWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE88B5B72B7F5A3000396A2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,13 +74,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECFBA3F2B95BE370056EE1D /* AppMetricaCrashes in Frameworks */,
+				CECFBA3D2B95BE370056EE1D /* AppMetricaCore in Frameworks */,
 				CEFA919E2B8F2B00009805AE /* Lottie in Frameworks */,
+				CECFBA412B95BE370056EE1D /* AppMetricaWebKit in Frameworks */,
+				CECFBA3B2B95BE370056EE1D /* AppMetricaAdSupport in Frameworks */,
+				0C9E8E13B8F070198FBE75E9 /* Pods_LearnWords.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		773673FA1DFB9AFFCE433E69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60589C8E259FBF1A05E405A3 /* Pods-LearnWords.debug.xcconfig */,
+				2EA81D2B6EEF167C07A4EA53 /* Pods-LearnWords.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		919376693C6BAE55B976AE7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF30DAB0A2F3A78BE321FA8F /* Pods_LearnWords.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE3BCDD62B87432C00867E61 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				CE3E25EA2B907A140073B543 /* PlistManager.swift */,
+				CE6838EA2B961892004ED95C /* BuildManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -98,6 +133,8 @@
 			children = (
 				CE88B5B62B7F5A3000396A2D /* LearnWords */,
 				CE88B5B52B7F5A3000396A2D /* Products */,
+				773673FA1DFB9AFFCE433E69 /* Pods */,
+				919376693C6BAE55B976AE7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +154,7 @@
 				CEFA91A12B8F6062009805AE /* Words.json */,
 				CE3E25E72B90768F0073B543 /* ru_words.json */,
 				CEFA919F2B8F2BB1009805AE /* animation.json */,
+				CE6838E82B95E3CC004ED95C /* sound.wav */,
 				CE3BCDD62B87432C00867E61 /* Model */,
 				CEEB41EB2B8628A300E9EFFC /* ProgressViewController */,
 				CEFE8A9F2B83A87E006A2F03 /* LearningViewController */,
@@ -193,9 +231,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE88B5C82B7F5A3200396A2D /* Build configuration list for PBXNativeTarget "LearnWords" */;
 			buildPhases = (
+				78985A02396E90E723C5A2DC /* [CP] Check Pods Manifest.lock */,
 				CE88B5B02B7F5A3000396A2D /* Sources */,
 				CE88B5B12B7F5A3000396A2D /* Frameworks */,
 				CE88B5B22B7F5A3000396A2D /* Resources */,
+				64F58E23EC203A137CB4D215 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,6 +244,10 @@
 			name = LearnWords;
 			packageProductDependencies = (
 				CEFA919D2B8F2B00009805AE /* Lottie */,
+				CECFBA3A2B95BE370056EE1D /* AppMetricaAdSupport */,
+				CECFBA3C2B95BE370056EE1D /* AppMetricaCore */,
+				CECFBA3E2B95BE370056EE1D /* AppMetricaCrashes */,
+				CECFBA402B95BE370056EE1D /* AppMetricaWebKit */,
 			);
 			productName = LearnWords;
 			productReference = CE88B5B42B7F5A3000396A2D /* LearnWords.app */;
@@ -235,6 +279,7 @@
 			mainGroup = CE88B5AB2B7F5A3000396A2D;
 			packageReferences = (
 				CEFA919C2B8F2B00009805AE /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				CECFBA392B95BE370056EE1D /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */,
 			);
 			productRefGroup = CE88B5B52B7F5A3000396A2D /* Products */;
 			projectDirPath = "";
@@ -252,6 +297,7 @@
 			files = (
 				CE88B5C42B7F5A3200396A2D /* LaunchScreen.storyboard in Resources */,
 				CEFA91A02B8F2BB1009805AE /* animation.json in Resources */,
+				CE6838E92B95E3CC004ED95C /* sound.wav in Resources */,
 				CE3E25E82B90768F0073B543 /* ru_words.json in Resources */,
 				CEFA91A22B8F6062009805AE /* Words.json in Resources */,
 				CE88B5C12B7F5A3200396A2D /* Assets.xcassets in Resources */,
@@ -260,6 +306,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64F58E23EC203A137CB4D215 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LearnWords/Pods-LearnWords-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LearnWords/Pods-LearnWords-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LearnWords/Pods-LearnWords-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78985A02396E90E723C5A2DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LearnWords-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE88B5B02B7F5A3000396A2D /* Sources */ = {
@@ -274,6 +362,7 @@
 				CE88B5BC2B7F5A3000396A2D /* ViewController.swift in Sources */,
 				CE6D3A3D2B91D27C004C2EAF /* DontKnowViewController.swift in Sources */,
 				CE88B5B82B7F5A3000396A2D /* AppDelegate.swift in Sources */,
+				CE6838EB2B961892004ED95C /* BuildManager.swift in Sources */,
 				CE88B5BA2B7F5A3000396A2D /* SceneDelegate.swift in Sources */,
 				CE3E25EB2B907A140073B543 /* PlistManager.swift in Sources */,
 				CEFA0D702B7F885A00C5A563 /* SettingsViewController.swift in Sources */,
@@ -427,14 +516,18 @@
 		};
 		CE88B5C92B7F5A3200396A2D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60589C8E259FBF1A05E405A3 /* Pods-LearnWords.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 24HMXXC377;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LearnWords/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LingvoQuiz;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow to use microphone for word pronunciation";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -459,14 +552,18 @@
 		};
 		CE88B5CA2B7F5A3200396A2D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EA81D2B6EEF167C07A4EA53 /* Pods-LearnWords.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 24HMXXC377;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LearnWords/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LingvoQuiz;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow to use microphone for word pronunciation";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -513,6 +610,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CECFBA392B95BE370056EE1D /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/appmetrica/appmetrica-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		CEFA919C2B8F2B00009805AE /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -524,6 +629,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CECFBA3A2B95BE370056EE1D /* AppMetricaAdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CECFBA392B95BE370056EE1D /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
+			productName = AppMetricaAdSupport;
+		};
+		CECFBA3C2B95BE370056EE1D /* AppMetricaCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CECFBA392B95BE370056EE1D /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
+			productName = AppMetricaCore;
+		};
+		CECFBA3E2B95BE370056EE1D /* AppMetricaCrashes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CECFBA392B95BE370056EE1D /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
+			productName = AppMetricaCrashes;
+		};
+		CECFBA402B95BE370056EE1D /* AppMetricaWebKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CECFBA392B95BE370056EE1D /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
+			productName = AppMetricaWebKit;
+		};
 		CEFA919D2B8F2B00009805AE /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CEFA919C2B8F2B00009805AE /* XCRemoteSwiftPackageReference "lottie-ios" */;

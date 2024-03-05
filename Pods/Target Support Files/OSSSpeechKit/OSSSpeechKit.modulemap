@@ -1,0 +1,6 @@
+framework module OSSSpeechKit {
+  umbrella header "OSSSpeechKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
