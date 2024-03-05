@@ -13,17 +13,18 @@ import AVFoundation
 
 class ProgressViewController: UIViewController {
     // Создаем коллекцию
-    var collectionView: UICollectionView!
+    private var collectionView: UICollectionView!
     
-    let speechKit = OSSSpeech.shared
+    private let speechKit = OSSSpeech.shared
     
-    var audioPlayer: AVAudioPlayer?
+    private var audioPlayer: AVAudioPlayer?
     
-    let generator = UINotificationFeedbackGenerator()
+    private let generator = UINotificationFeedbackGenerator()
+    
     
     private var animationView: LottieAnimationView?
     
-    let button: UIButton = {
+    private let button: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Не знаю", for: .normal)
@@ -33,7 +34,7 @@ class ProgressViewController: UIViewController {
         return button
     }()
     
-    let closeButton: UIButton = {
+    private let closeButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "closeButton"), for: .normal)
         button.tintColor = .black
@@ -41,7 +42,7 @@ class ProgressViewController: UIViewController {
         return button
     }()
     
-    let soundButton: UIButton = {
+    private let soundButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "sound-play-button"), for: .normal)
         button.tintColor = .black
@@ -49,7 +50,7 @@ class ProgressViewController: UIViewController {
         return button
     }()
     
-    let wordLabel: UILabel = {
+    private let wordLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Rue"
@@ -60,7 +61,7 @@ class ProgressViewController: UIViewController {
         return label
     }()
     
-    let progressLabel: UILabel = {
+    private let progressLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "5000/5"
@@ -70,7 +71,7 @@ class ProgressViewController: UIViewController {
         return label
     }()
     
-    let progressBar: UIProgressView = {
+    private let progressBar: UIProgressView = {
         let progressBar = UIProgressView(progressViewStyle: .default)
         progressBar.translatesAutoresizingMaskIntoConstraints = false
         progressBar.progressTintColor = UIColor(red: 18/255, green: 18/255, blue: 23/255, alpha: 1)
@@ -79,13 +80,16 @@ class ProgressViewController: UIViewController {
         return progressBar
     }()
     
-    var questionsData: QuestionsData
-    var questionsDataToShow: QuestionsData?
-    var type: DictionaryType
-    var wordCounter = 0
+    private var questionsData: QuestionsData
+    private var questionsDataToShow: QuestionsData?
+    private var type: DictionaryType
+    private var wordCounter = 0
     
-    var answerSet = Set<String>()
-    var answerArray = [String]()
+    private var answerSet = Set<String>()
+    private var answerArray = [String]()
+    
+    private var isSoundOn = false
+    private var isVibrationOn = false
     
     init(questionsData: QuestionsData, dictionaryType: DictionaryType) {
         self.questionsData = questionsData
@@ -111,6 +115,9 @@ class ProgressViewController: UIViewController {
         
         setupUi()
         loadSound()
+        
+        isSoundOn = UserDefaults.standard.bool(forKey: UserDefaultsKey.soundSwitchState.rawValue)
+        isVibrationOn = UserDefaults.standard.bool(forKey: UserDefaultsKey.vibrationSwitchState.rawValue)
     }
     
     private func setupUi() {
@@ -242,7 +249,9 @@ extension ProgressViewController: UICollectionViewDelegate, UICollectionViewData
             cell.backgroundColor = .systemGreen
             self.animationView?.isHidden = false
             self.animationView!.play()
-            self.audioPlayer?.play()
+            if !isSoundOn {
+                self.audioPlayer?.play()
+            }
             self.collectionView.isUserInteractionEnabled = false
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.goTonextWord()
@@ -262,7 +271,9 @@ extension ProgressViewController: UICollectionViewDelegate, UICollectionViewData
             case .russianWords:
                 PlistManager.shared.saveDataToPlist(data: questionsData, plistName: PlistName.russianWords.rawValue)
             }
-            generator.notificationOccurred(.error)
+            if !isVibrationOn {
+                generator.notificationOccurred(.error)
+            }
             self.collectionView.isUserInteractionEnabled = false
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.goTonextWord()
