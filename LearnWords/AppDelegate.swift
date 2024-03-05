@@ -6,14 +6,15 @@
 //
 
 import UIKit
+import AppMetricaCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Initializing the AppMetrica SDK.
+        let configuration = AppMetricaConfiguration(apiKey: "4e37f2ae-8892-4874-8be2-755b9a071983")
+        AppMetrica.activate(with: configuration!)
         return true
     }
 

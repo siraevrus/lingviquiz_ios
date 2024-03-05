@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var versionLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     
     override func viewDidLoad() {
@@ -19,15 +20,16 @@ class ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         startButton.layer.cornerRadius = 8
+        versionLabel.text = "Версия \(BuildManager.appVersion)"
     }
     
     @IBAction func startbuttonTapped(_ sender: UIButton) {
         let tabBarVC = UITabBarController()
         
         let homeVC = HomeViewController()
-        homeVC.title = "Home"
+        //homeVC.title = "Home"
         let settingsVC = SettingsViewController()
-        settingsVC.title = "Settings"
+        //settingsVC.title = "Settings"
         
         let homeNavVC = UINavigationController(rootViewController: homeVC)
         let settingsNav = UINavigationController(rootViewController: settingsVC)
@@ -44,12 +46,13 @@ class ViewController: UIViewController {
         
         if #available(iOS 15.0, *) {
             let appearance = UITabBarAppearance()
-            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .white
             UITabBar.appearance().standardAppearance = appearance
             UITabBar.appearance().scrollEdgeAppearance = appearance
         }
         
         tabBarVC.tabBar.tintColor = .black
+        tabBarVC.tabBar.barTintColor = .white
         tabBarVC.modalPresentationStyle = .fullScreen
         
         present(tabBarVC, animated: true)
