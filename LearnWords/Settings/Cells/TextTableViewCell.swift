@@ -14,6 +14,7 @@ class TextTableViewCell: UITableViewCell {
     let label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
         return label
     }()
     
@@ -27,6 +28,7 @@ class TextTableViewCell: UITableViewCell {
     }
     
     private func setupCell() {
+        contentView.backgroundColor = .white
         contentView.addSubview(label)
         
         NSLayoutConstraint.activate([

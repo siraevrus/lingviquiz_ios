@@ -14,6 +14,7 @@ class SwitchTableViewCell: UITableViewCell {
     let label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
         return label
     }()
     
@@ -33,6 +34,7 @@ class SwitchTableViewCell: UITableViewCell {
     }
     
     private func setupCell() {
+        contentView.backgroundColor = .white
         contentView.addSubview(label)
         contentView.addSubview(switchControl)
         

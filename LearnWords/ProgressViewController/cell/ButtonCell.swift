@@ -19,6 +19,7 @@ class ButtonCell: UICollectionViewCell {
         label.textAlignment = .left
         label.numberOfLines = 0
         label.font = .systemFont(ofSize: 14)
+        label.textColor = .black
         contentView.addSubview(label)
         
         // Устанавливаем констрейнты для лейбла

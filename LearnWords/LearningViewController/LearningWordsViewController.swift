@@ -15,6 +15,7 @@ class LearningWordsViewController: UIViewController {
         label.text = "5000 популярных английских слов"
         label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         label.numberOfLines = 0
+        label.textColor = .black
         return label
     }()
     
@@ -30,6 +31,7 @@ class LearningWordsViewController: UIViewController {
     let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .white
         return tableView
     }()
     
