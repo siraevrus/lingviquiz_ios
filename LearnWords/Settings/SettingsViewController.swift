@@ -48,6 +48,23 @@ class SettingsViewController: UIViewController {
         versionLabel.text = "Версия \(BuildManager.appVersion)"
     }
     
+    private func showDeleteAlertWithConfirmation() {
+        let alertController = UIAlertController(title: "Вы уверены что хотите сбросить прогресс?", message: nil, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Да", style: .default) { (_) in
+            PlistManager.shared.deleteAllPlists()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel) { (_) in
+            print("Вы нажали 'Отмена'")
+        }
+        
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
     private func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
@@ -159,8 +176,7 @@ extension SettingsViewController: UITableViewDelegate {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
             case 3:
-                // Handle "Сбросить прогресс"
-                print("Сбросить прогресс")
+                showDeleteAlertWithConfirmation()
             default:
                 break
             }

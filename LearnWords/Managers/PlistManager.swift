@@ -54,5 +54,24 @@ final class PlistManager {
         
         return nil
     }
+    
+    func deleteAllPlists() {
+        let fileManager = FileManager.default
+        let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+        do {
+            let fileURLs = try fileManager.contentsOfDirectory(at: documentsDirectory, includingPropertiesForKeys: nil)
+            for url in fileURLs {
+                // Check if the file is a plist
+                if url.pathExtension == "plist" {
+                    // Delete the plist file
+                    try fileManager.removeItem(at: url)
+                }
+            }
+            print("All plists deleted successfully.")
+        } catch {
+            print("Error deleting plists: \(error)")
+        }
+    }
+
 }
 
