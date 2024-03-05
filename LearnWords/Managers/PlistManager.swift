@@ -5,7 +5,7 @@ enum PlistName: String {
     case russianWords = "russianWords"
 }
 
-class PlistManager {
+final class PlistManager {
     
     static let shared = PlistManager()
     
