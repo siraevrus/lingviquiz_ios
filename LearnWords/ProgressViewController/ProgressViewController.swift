@@ -6,14 +6,20 @@
 //
 
 import UIKit
-import AVFoundation
 import Lottie
+import OSSSpeechKit
+import AVFoundation
+
 
 class ProgressViewController: UIViewController {
     // Создаем коллекцию
     var collectionView: UICollectionView!
     
-    let synthesizer = AVSpeechSynthesizer()
+    let speechKit = OSSSpeech.shared
+    
+    var audioPlayer: AVAudioPlayer?
+    
+    let generator = UINotificationFeedbackGenerator()
     
     private var animationView: LottieAnimationView?
     
@@ -50,6 +56,7 @@ class ProgressViewController: UIViewController {
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         label.numberOfLines = 0
+        label.textColor = .black
         return label
     }()
     
@@ -59,6 +66,7 @@ class ProgressViewController: UIViewController {
         label.text = "5000/5"
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.numberOfLines = 0
+        label.textColor = .black
         return label
     }()
     
@@ -102,8 +110,7 @@ class ProgressViewController: UIViewController {
         setupConstraints()
         
         setupUi()
-        
-        synthesizer.delegate = self
+        loadSound()
     }
     
     private func setupUi() {
@@ -138,15 +145,26 @@ class ProgressViewController: UIViewController {
         animationView?.isHidden = true
     }
     
+    private func loadSound() {
+        if let path = Bundle.main.path(forResource: "sound", ofType: "wav") {
+            let url = URL(fileURLWithPath: path)
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: url)
+                audioPlayer?.prepareToPlay()
+            } catch {
+                print("Error loading sound file: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     private func speak(text: String) {
-        let utterance = AVSpeechUtterance(string: text)
         switch type {
         case .englishWords:
-            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            speechKit.voice = OSSVoice(quality: .enhanced, language: .English)
         case .russianWords:
-            utterance.voice = AVSpeechSynthesisVoice(language: "ru-RU")
+            speechKit.voice = OSSVoice(quality: .enhanced, language: .Russian)
         }
-        synthesizer.speak(utterance)
+        speechKit.speakText(text)
     }
     
     private func processLabelText(_ text: String) -> String {
@@ -224,6 +242,7 @@ extension ProgressViewController: UICollectionViewDelegate, UICollectionViewData
             cell.backgroundColor = .systemGreen
             self.animationView?.isHidden = false
             self.animationView!.play()
+            self.audioPlayer?.play()
             self.collectionView.isUserInteractionEnabled = false
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.goTonextWord()
@@ -243,6 +262,7 @@ extension ProgressViewController: UICollectionViewDelegate, UICollectionViewData
             case .russianWords:
                 PlistManager.shared.saveDataToPlist(data: questionsData, plistName: PlistName.russianWords.rawValue)
             }
+            generator.notificationOccurred(.error)
             self.collectionView.isUserInteractionEnabled = false
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.goTonextWord()
@@ -326,8 +346,4 @@ extension ProgressViewController {
             progressBar.heightAnchor.constraint(equalToConstant: 6)
         ])
     }
-}
-
-extension ProgressViewController: AVSpeechSynthesizerDelegate {
-    
 }
