@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class SettingsViewController: UIViewController {
     let madeInLabel: UILabel = {
@@ -91,6 +92,25 @@ class SettingsViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: madeInLabel.topAnchor, constant: -10),
         ])
     }
+    
+    private func composeEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mailComposer = MFMailComposeViewController()
+            mailComposer.mailComposeDelegate = self
+            mailComposer.setToRecipients(["help@onza.me"])
+            mailComposer.setSubject("LingvoQuiz")
+            
+            present(mailComposer, animated: true, completion: nil)
+        } else {
+            print("Устройство не настроено для отправки почты.")
+        }
+    }
+}
+
+extension SettingsViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension SettingsViewController: UITableViewDataSource {
@@ -166,9 +186,7 @@ extension SettingsViewController: UITableViewDelegate {
             }
             switch indexPath.row {
             case 0:
-                if let url = URL(string: "https://help@onza.me") {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                }
+                composeEmail()
             case 1:
                 if let url = URL(string: "https://onza.me/lingoquiz.html") {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
