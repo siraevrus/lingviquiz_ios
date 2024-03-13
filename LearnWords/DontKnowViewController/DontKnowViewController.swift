@@ -76,18 +76,6 @@ class DontKnowViewController: UIViewController {
         setupUi()
         
         synthesizer.delegate = self
-        
-        switch type {
-        case .englishWords:
-            title = "Word to learn"
-        case .russianWords:
-            title = "Слова для изучения"
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func setupUi() {

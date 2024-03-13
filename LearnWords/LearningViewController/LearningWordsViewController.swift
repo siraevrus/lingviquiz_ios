@@ -72,6 +72,7 @@ class LearningWordsViewController: UIViewController {
         case .russianWords:
             label.text = "5000 популярных русских слов"
         }
+        title = ""
     }
     
     override func viewWillAppear(_ animated: Bool) {

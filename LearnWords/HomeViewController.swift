@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     
     let label: UILabel = {
         let label = UILabel()
-        label.text = "Выберите, какой язык хотите изучить"
+        label.text = "Выберите, что вы хотите изучить"
         label.font = UIFont.boldSystemFont(ofSize: 28)
         label.numberOfLines = 0
         label.textAlignment = .left
@@ -36,6 +36,7 @@ class HomeViewController: UIViewController {
         
         view.backgroundColor = .white
         setupCollectionView()
+        title = ""
     }
     
     private func parseEnWords() -> QuestionsData? {

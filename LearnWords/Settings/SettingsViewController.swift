@@ -166,13 +166,15 @@ extension SettingsViewController: UITableViewDelegate {
             }
             switch indexPath.row {
             case 0:
-                // Handle "Обратная связь"
-                print("Обратная связь")
+                if let url = URL(string: "https://help@onza.me") {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
             case 1:
-                // Handle "Помощь"
-                print("Помощь")
+                if let url = URL(string: "https://onza.me/lingoquiz.html") {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
             case 2:
-                if let url = URL(string: "https://LingvoQuiz@onza.me") {
+                if let url = URL(string: "https://onza.me/lingoquiz_about.html") {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
             case 3:
