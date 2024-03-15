@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AppTrackingTransparency
 
 class ViewController: UIViewController {
     
@@ -14,13 +15,25 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.requestAppTrackingThen()
+        }
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         startButton.layer.cornerRadius = 8
         versionLabel.text = "Версия \(BuildManager.appVersion)"
+    }
+    
+    
+    private func requestAppTrackingThen() {
+        if #available(iOS 14.5, *) {
+            ATTrackingManager.requestTrackingAuthorization { status in
+            }
+        } else {
+            print("Not supported")
+        }
     }
     
     @IBAction func startbuttonTapped(_ sender: UIButton) {
