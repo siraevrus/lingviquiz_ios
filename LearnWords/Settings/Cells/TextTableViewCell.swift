@@ -61,6 +61,8 @@ class TextTableViewCell: UITableViewCell {
     func configure(with word: WordModel) {
         label.text = word.word
         if word.know == false {
+            label.textColor = .red
+        } else if word.choose == true {
             label.textColor = UIColor(red: 65/255, green: 165/255, blue: 238/255, alpha: 1)
         }
         label.font = .systemFont(ofSize: 20, weight: .bold)
