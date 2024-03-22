@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0C9E8E13B8F070198FBE75E9 /* Pods_LearnWords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF30DAB0A2F3A78BE321FA8F /* Pods_LearnWords.framework */; };
+		CE1251082BAD65190093B7B6 /* ru2.json in Resources */ = {isa = PBXBuildFile; fileRef = CE1251072BAD65190093B7B6 /* ru2.json */; };
 		CE3BCDD82B8743A600867E61 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCDD72B8743A600867E61 /* WordModel.swift */; };
-		CE3E25E82B90768F0073B543 /* ru_words.json in Resources */ = {isa = PBXBuildFile; fileRef = CE3E25E72B90768F0073B543 /* ru_words.json */; };
 		CE3E25EB2B907A140073B543 /* PlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E25EA2B907A140073B543 /* PlistManager.swift */; };
+		CE411A9B2BAC85E0007045D8 /* en2.json in Resources */ = {isa = PBXBuildFile; fileRef = CE411A992BAC85E0007045D8 /* en2.json */; };
 		CE6838E92B95E3CC004ED95C /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = CE6838E82B95E3CC004ED95C /* sound.wav */; };
 		CE6838EB2B961892004ED95C /* BuildManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6838EA2B961892004ED95C /* BuildManager.swift */; };
 		CE6D3A3D2B91D27C004C2EAF /* DontKnowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6D3A3C2B91D27C004C2EAF /* DontKnowViewController.swift */; };
@@ -30,7 +31,6 @@
 		CEFA0D702B7F885A00C5A563 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFA0D6F2B7F885A00C5A563 /* SettingsViewController.swift */; };
 		CEFA919E2B8F2B00009805AE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CEFA919D2B8F2B00009805AE /* Lottie */; };
 		CEFA91A02B8F2BB1009805AE /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = CEFA919F2B8F2BB1009805AE /* animation.json */; };
-		CEFA91A22B8F6062009805AE /* Words.json in Resources */ = {isa = PBXBuildFile; fileRef = CEFA91A12B8F6062009805AE /* Words.json */; };
 		CEFE8A962B8370F4006A2F03 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE8A952B8370F4006A2F03 /* HomeCollectionViewCell.swift */; };
 		CEFE8A982B837A5A006A2F03 /* LearningWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE8A972B837A5A006A2F03 /* LearningWordsViewController.swift */; };
 		CEFE8A9C2B837DCD006A2F03 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE8A9B2B837DCD006A2F03 /* SwitchTableViewCell.swift */; };
@@ -42,9 +42,10 @@
 		2EA81D2B6EEF167C07A4EA53 /* Pods-LearnWords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnWords.release.xcconfig"; path = "Target Support Files/Pods-LearnWords/Pods-LearnWords.release.xcconfig"; sourceTree = "<group>"; };
 		60589C8E259FBF1A05E405A3 /* Pods-LearnWords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnWords.debug.xcconfig"; path = "Target Support Files/Pods-LearnWords/Pods-LearnWords.debug.xcconfig"; sourceTree = "<group>"; };
 		AF30DAB0A2F3A78BE321FA8F /* Pods_LearnWords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnWords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1251072BAD65190093B7B6 /* ru2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ru2.json; sourceTree = "<group>"; };
 		CE3BCDD72B8743A600867E61 /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
-		CE3E25E72B90768F0073B543 /* ru_words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ru_words.json; sourceTree = "<group>"; };
 		CE3E25EA2B907A140073B543 /* PlistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistManager.swift; sourceTree = "<group>"; };
+		CE411A992BAC85E0007045D8 /* en2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = en2.json; sourceTree = "<group>"; };
 		CE6838E82B95E3CC004ED95C /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
 		CE6838EA2B961892004ED95C /* BuildManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildManager.swift; sourceTree = "<group>"; };
 		CE6D3A3C2B91D27C004C2EAF /* DontKnowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DontKnowViewController.swift; sourceTree = "<group>"; };
@@ -61,7 +62,6 @@
 		CEEB41EF2B862BEF00E9EFFC /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		CEFA0D6F2B7F885A00C5A563 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CEFA919F2B8F2BB1009805AE /* animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
-		CEFA91A12B8F6062009805AE /* Words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Words.json; sourceTree = "<group>"; };
 		CEFE8A952B8370F4006A2F03 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		CEFE8A972B837A5A006A2F03 /* LearningWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningWordsViewController.swift; sourceTree = "<group>"; };
 		CEFE8A9B2B837DCD006A2F03 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
@@ -151,9 +151,9 @@
 			children = (
 				CE6D3A3B2B91D259004C2EAF /* DontKnowViewController */,
 				CE3E25E92B907A030073B543 /* Managers */,
-				CEFA91A12B8F6062009805AE /* Words.json */,
-				CE3E25E72B90768F0073B543 /* ru_words.json */,
 				CEFA919F2B8F2BB1009805AE /* animation.json */,
+				CE411A992BAC85E0007045D8 /* en2.json */,
+				CE1251072BAD65190093B7B6 /* ru2.json */,
 				CE6838E82B95E3CC004ED95C /* sound.wav */,
 				CE3BCDD62B87432C00867E61 /* Model */,
 				CEEB41EB2B8628A300E9EFFC /* ProgressViewController */,
@@ -298,10 +298,10 @@
 				CE88B5C42B7F5A3200396A2D /* LaunchScreen.storyboard in Resources */,
 				CEFA91A02B8F2BB1009805AE /* animation.json in Resources */,
 				CE6838E92B95E3CC004ED95C /* sound.wav in Resources */,
-				CE3E25E82B90768F0073B543 /* ru_words.json in Resources */,
-				CEFA91A22B8F6062009805AE /* Words.json in Resources */,
+				CE1251082BAD65190093B7B6 /* ru2.json in Resources */,
 				CE88B5C12B7F5A3200396A2D /* Assets.xcassets in Resources */,
 				CE88B5BF2B7F5A3000396A2D /* Main.storyboard in Resources */,
+				CE411A9B2BAC85E0007045D8 /* en2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

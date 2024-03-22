@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
     }
     
     private func parseEnWords() -> QuestionsData? {
-        guard let jsonFilePath = Bundle.main.path(forResource: "Words", ofType: "json") else {
+        guard let jsonFilePath = Bundle.main.path(forResource: "en2", ofType: "json") else {
             return nil
         }
 
@@ -56,7 +56,7 @@ class HomeViewController: UIViewController {
     }
     
     private func parseRuWords() -> QuestionsData? {
-        guard let jsonFilePath = Bundle.main.path(forResource: "ru_words", ofType: "json") else {
+        guard let jsonFilePath = Bundle.main.path(forResource: "ru2", ofType: "json") else {
             return nil
         }
 
