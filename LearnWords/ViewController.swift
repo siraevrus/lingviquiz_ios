@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import AppTrackingTransparency
 
 class ViewController: UIViewController {
     
@@ -15,9 +14,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.requestAppTrackingThen()
-        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -26,23 +22,11 @@ class ViewController: UIViewController {
         versionLabel.text = "Версия \(BuildManager.appVersion)"
     }
     
-    
-    private func requestAppTrackingThen() {
-        if #available(iOS 14.5, *) {
-            ATTrackingManager.requestTrackingAuthorization { status in
-            }
-        } else {
-            print("Not supported")
-        }
-    }
-    
     @IBAction func startbuttonTapped(_ sender: UIButton) {
         let tabBarVC = UITabBarController()
         
         let homeVC = HomeViewController()
-        //homeVC.title = "Home"
         let settingsVC = SettingsViewController()
-        //settingsVC.title = "Settings"
         
         let homeNavVC = UINavigationController(rootViewController: homeVC)
         let settingsNav = UINavigationController(rootViewController: settingsVC)
